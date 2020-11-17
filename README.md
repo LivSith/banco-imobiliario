@@ -21,21 +21,18 @@ Mostrando as seguintes informações:
 > $ cd banco-imobiliario/
 >```
 
- 3. Criar uma maquina virtual chamada 'myvenv', dentro da pasta;
+3. Criar uma maquina virtual chamada 'myvenv', dentro da pasta;
 
 >```
 > $ python3 -m venv myvenv
 >```
 
- 4. Ativar maquina virtual;
+4. Ativar maquina virtual;
+
 >```
-> $ source projectvenv/bin/activate
+> $ source myvenv/bin/activate
 >```
 
-3. Ir para a pasta correta;
->```
->$ cd TechStartPro/
->```
 
 5. Instalar os requisitos do ambiente;
 >```
@@ -52,8 +49,7 @@ Mostrando as seguintes informações:
 >$ python manage.py runserver
 >```
 
-8. Abrir o navegador e acessar o servidor local.
+8. Abrir o navegador e acessar o servidor local. http://127.0.0.1:8000/
 
- 'http://127.0.0.1:8000/'
 
 9. E começar a usar \0/
