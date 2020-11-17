@@ -7,23 +7,26 @@ def game(request):
     board = Board.objects.all()
     properties = Property.objects.all()
     players = Player.objects.all()
-    dado = __get_d6__
+    dice = random.randint(1, 6)
 
-    #for prayer  in players:
-        #d6 = choices()
+    print ('quantidade de propriedades', len(properties))
+    result = 0
+    for player in players:
+        result += dice
+        if result < len(properties):
+            continue
+        else:
+            result = int(len(properties)) - result
+            player.purchase_balance + 100
+            if player.personality == 'I':
+                print ('comprei', properties[result])
+            print ('player: ', player.name, 'saldo: ', player.purchase_balance)
 
     context = {
         'board' : board,
         'properties' : properties,
         'player' : players,
-        'dice' : dado
+        'dice' : dice
     }
 
     return render(request, 'index.html', context)
-
-# Nosso dado D6
-def __get_d6__():
-    min_value = 1
-    max_value = 6
-
-    return (random.randint(min_value, max_value))
